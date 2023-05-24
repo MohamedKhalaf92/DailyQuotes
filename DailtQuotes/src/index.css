@@ -7,6 +7,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /* font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; */
 }
 
 .advice-container {
@@ -39,18 +40,23 @@ body {
   text-align: center;
 }
 
-.inner-containter{
+.inner-containter {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.button{
-  padding:7px;
-  width:70px;
+.button {
+  padding: 7px;
+  width: 70px;
 }
 
-.button-loading{
+.button-loading {
   color: white;
+}
+
+.header {
+  text-align: center;
+  color: teal;
 }

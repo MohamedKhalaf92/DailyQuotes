@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function Header() {
-  return (
-    <div></div>
-  )
+  return <h1 className="header">Wise Words</h1>;
 }
 
-export default Header
+export default Header;

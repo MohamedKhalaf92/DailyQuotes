@@ -32,7 +32,6 @@ function App() {
       setNext((prev) => prev + 1);
       setIsLoading(false);
     }, 3000);
-
   };
   // const newAdvice = async () => {
   //   await setIsLoading(true);
@@ -59,14 +58,14 @@ function App() {
 
   return (
     <>
-    <></>
-    <div className="advice-container">
-      <MainContent
-        advice={advice}
-        newAdvice={newAdvice}
-        isLoading={isLoading}
-      />
-    </div>
+      <Header />
+      <div className="advice-container">
+        <MainContent
+          advice={advice}
+          newAdvice={newAdvice}
+          isLoading={isLoading}
+        />
+      </div>
     </>
   );
 }
