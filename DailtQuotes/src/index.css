@@ -1,19 +1,19 @@
 body {
-   
-    width: 100vw;
-    height: 100vh;
-    background: url('https://png.pngtree.com/thumb_back/fh260/background/20200714/pngtree-modern-double-color-futuristic-neon-background-image_351866.jpg');
-    background-size: cover;
-    display: flex;
+  width: 100vw;
+  height: 100vh;
+  background: url("https://png.pngtree.com/thumb_back/fh260/background/20200714/pngtree-modern-double-color-futuristic-neon-background-image_351866.jpg");
+  background-size: cover;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  }
+}
 
-.advice-container{
-  border:solid white;
-  height:400px;
-  width:800px;
+.advice-container {
+  border: solid white;
+  height: 400px;
+  width: 800px;
+  padding: 20px;
   border-radius: 10%;
   background-color: black;
   color: white;
@@ -23,16 +23,18 @@ body {
   justify-content: center;
   align-items: center;
 }
-
-.title{
-font-size: 30px;
-color: aqua;
+.advice {
+  text-align: center;
+  font-size: 30px;
 }
 
-.sub-title{
-font-size: 15px;
+.title {
+  font-size: 30px;
+  color: aqua;
+  text-align: center;
 }
 
-.advice{
-font-size: 30px;
+.sub-title {
+  font-size: 15px;
+  text-align: center;
 }
