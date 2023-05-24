@@ -1,16 +1,19 @@
 import { useState, useEffect } from "react";
+import { cors } from "cors";
 
 function App() {
   const [backgroundImage, setBacgroundImage] = useState([]);
   const apiKey = "_n7JT400hcnqytDWaOTEi6dJ0BD_PTQyKDiZOJ-fYN8";
   const urlBackground = "https://api.unsplash.com/photos/random";
   const urlQuotes = "https://zenquotes.io/api/quotes/";
+  const cors = reqi;
 
   useEffect(() => {
     async function quotes() {
       const response = await fetch(urlQuotes, {
         method: "GET",
         // mode: "no-cors",
+        headers: {},
       });
       console.log(response);
       const data = await response.json();
