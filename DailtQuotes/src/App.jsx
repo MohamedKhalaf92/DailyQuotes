@@ -1,24 +1,24 @@
 import { useState, useEffect } from "react";
-import { cors } from "cors";
+import MainContent from "./components/MainContent";
 
 function App() {
-  const [backgroundImage, setBacgroundImage] = useState([]);
+  const [backgroundImage, setBackgroundImage] = useState("");
+  const [advice, setAdvice] = useState("");
   const apiKey = "_n7JT400hcnqytDWaOTEi6dJ0BD_PTQyKDiZOJ-fYN8";
   const urlBackground = "https://api.unsplash.com/photos/random";
-  const urlQuotes = "https://zenquotes.io/api/quotes/";
-  const cors = reqi;
+  const urlQuotes = "https://api.adviceslip.com/advice";
 
   useEffect(() => {
     async function quotes() {
       const response = await fetch(urlQuotes, {
         method: "GET",
-        // mode: "no-cors",
-        headers: {},
       });
-      console.log(response);
+      // console.log(response);
       const data = await response.json();
-      console.log(data);
-      return data;
+      console.log(data.slip);
+      const adviceSlip = data.slip.advice;
+      setAdvice(adviceSlip);
+      return adviceSlip;
     }
     quotes();
   }, []);
@@ -29,14 +29,17 @@ function App() {
       });
       const data = await response.json();
       console.log(data.urls.full);
-      return data.urls.full;
+      const backUrl = data.urls.full;
+      setBackgroundImage(backUrl);
+      return backUrl;
     }
     unsplashImg();
   }, []);
 
   return (
-    <div>
-      <h1>Hello</h1>
+    <div className="advice-container">
+      <img src={`${backgroundImage}`} />
+      <MainContent advice={advice} />
     </div>
   );
 }
