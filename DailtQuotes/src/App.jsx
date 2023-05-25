@@ -22,23 +22,35 @@ function App() {
     }
     quotes();
   }, []);
-  useEffect(() => {
-    async function unsplashImg() {
-      const response = await fetch(urlBackground, {
-        headers: { Authorization: `Client-ID ${apiKey}` },
-      });
-      const data = await response.json();
-      console.log(data.urls.full);
-      const backUrl = data.urls.full;
-      setBackgroundImage(backUrl);
-      return backUrl;
-    }
-    unsplashImg();
-  }, []);
+
+
+  // useEffect(() => {
+  //   async function unsplashImg() {
+  //     const response = await fetch(urlBackground, {
+  //       headers: { Authorization: `Client-ID ${apiKey}` },
+  //     });
+  //     const data = await response.json();
+  //     console.log(data.urls.full);
+  //     const backUrl = data.urls.full;
+  //     setBackgroundImage(backUrl);
+  //     return backUrl;
+  //   }
+  //   unsplashImg();
+  // }, []);
+
+  //How to add authorisation api key to header when required. 
+
+
+
+  
+  //Create next button to reset 
+
+  //try reize box when text is long 
+
+  //title above th adviceContainer. 
 
   return (
     <div className="advice-container">
-      <img src={`${backgroundImage}`} />
       <MainContent advice={advice} />
     </div>
   );

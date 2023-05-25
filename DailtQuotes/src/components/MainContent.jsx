@@ -1,12 +1,11 @@
 import React from "react";
 
 export default function MainContent(props) {
-  console.log(props);
   return (
     <div>
-      <h1>Advice of the day</h1>
-      <h2>note</h2>
-      <p>{props}</p>
+      <h1 className="title">Advice Of The Day is Here!</h1>
+      <h2 className="sub-title">Note it Down ✍️</h2>
+      <p className="advice">{props.advice}</p>
     </div>
   );
 }
