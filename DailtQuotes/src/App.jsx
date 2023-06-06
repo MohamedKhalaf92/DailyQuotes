@@ -57,7 +57,7 @@ function App() {
   //title above th adviceContainer.
 
   return (
-    <>
+    <div className="app-container">
       <Header />
       <div className="advice-container">
         <MainContent
@@ -66,7 +66,7 @@ function App() {
           isLoading={isLoading}
         />
       </div>
-    </>
+    </div>
   );
 }
 
